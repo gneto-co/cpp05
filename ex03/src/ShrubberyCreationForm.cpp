@@ -49,11 +49,11 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 /** SECTION - other functions **/
 
-void ShrubberyCreationForm::execute(Bureaucrat &b)
+void ShrubberyCreationForm::execute(Bureaucrat const &b)
 {
 	// FT_MSG("ShrubberyCreationForm::execute")
 
-	AForm::execute(b);
+	AForm::beExecuted(b);
 
 	STRING file_name = this->_target + "_shrubbery";
 

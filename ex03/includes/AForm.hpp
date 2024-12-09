@@ -36,7 +36,8 @@ public:
 
 	/* other funtions */
 	void beSigned(Bureaucrat &bureaucrat);
-	void execute(Bureaucrat const & executor) const;
+	void beExecuted(Bureaucrat const &bureaucrat);
+	virtual void execute(Bureaucrat const &bureaucrat) = 0;
 
 	/* exceptions */
 	class GradeTooLowException : public std::exception

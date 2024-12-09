@@ -52,11 +52,11 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &s
 
 /** SECTION - other functions **/
 
-void RobotomyRequestForm::execute(Bureaucrat &b)
+void RobotomyRequestForm::execute(const Bureaucrat &b)
 {
 	// FT_MSG("RobotomyRequestForm::execute")
 
-	AForm::execute(b);
+	AForm::beExecuted(b);
 
 	int min = 1;
 	int max = 100;

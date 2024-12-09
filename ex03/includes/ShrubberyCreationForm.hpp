@@ -19,7 +19,7 @@ public:
 	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &src);
 
     /* other functions */
-    void execute(Bureaucrat &b);
+    void execute(Bureaucrat const &b);
 };
 
 #endif

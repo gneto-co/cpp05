@@ -19,7 +19,7 @@ public:
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &src);
 
     /* other functions */
-    void execute(Bureaucrat &b);
+    void execute(const Bureaucrat &b);
 };
 
 #endif

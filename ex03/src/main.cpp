@@ -13,39 +13,16 @@ int main(void)
 		try
 		{
 			Intern alex;
-			Bureaucrat bob("bob", 138);
-			AForm *tree_paper = alex.makeForm("ShrubberyCreationForm", "home");
+			Bureaucrat bob("bob", 1);
+			AForm *tree_paper = alex.makeForm("RobotomyRequestForm", "jeb");
 
-			PRINT << tree_paper << ENDL;
+			PRINT << *tree_paper << ENDL;
 			PRINT << bob << ENDL;
-
-			// unsigned
-			try
-			{
-				tree_paper->execute(bob);
-			}
-			catch (const std::exception &e)
-			{
-				std::cerr << e.what() << '\n';
-			}
-
-			tree_paper->beSigned(bob);
-
-			// bob grade too low
-			try
-			{
-				tree_paper->execute(bob);
-			}
-			catch (const std::exception &e)
-			{
-				std::cerr << e.what() << '\n';
-			}
-
-			bob.incrementGrade();
 
 			// valid
 			try
 			{
+				bob.signForm(*tree_paper);				
 				tree_paper->execute(bob);
 			}
 			catch (const std::exception &e)

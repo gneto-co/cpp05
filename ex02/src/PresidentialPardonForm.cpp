@@ -49,11 +49,11 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 /** SECTION - other functions **/
 
-void PresidentialPardonForm::execute(Bureaucrat &b)
+void PresidentialPardonForm::execute(const Bureaucrat &b)
 {
 	// FT_MSG("PresidentialPardonForm::execute")
 
-	AForm::execute(b);
+	AForm::beExecuted(b);
 
 	PRINT << GREEN BOLT << this->_target << "has been pardoned by Zaphod Beeblebrox" << RESEND;
 

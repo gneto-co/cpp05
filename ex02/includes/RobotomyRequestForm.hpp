@@ -19,7 +19,7 @@ public:
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &src);
 
     /* other functions */
-    void execute(Bureaucrat &b);
+    void execute(Bureaucrat const &b);
 };
 
 #endif

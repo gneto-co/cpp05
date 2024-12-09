@@ -93,7 +93,7 @@ void AForm::beSigned(Bureaucrat &b)
 		throw AForm::GradeTooLowException();
 }
 
-void AForm::execute(Bureaucrat const &b) const
+void AForm::beExecuted(Bureaucrat const &b)
 {
 	if (this->_signed == false)
 		throw AForm::UnsignedFormException();
