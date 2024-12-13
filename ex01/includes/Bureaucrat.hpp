@@ -6,7 +6,7 @@
 #define MAX_GRADE 1
 #define MIN_GRADE 150
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -34,7 +34,7 @@ public:
 	/* other funtions */
 	void incrementGrade(void);
 	void decrementGrade(void);
-	void signForm(Form &form);
+	void signForm(AForm &form);
 
 	/* exceptions */
 	class GradeTooLowException : public std::exception
