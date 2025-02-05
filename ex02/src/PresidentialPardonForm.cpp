@@ -57,7 +57,7 @@ void PresidentialPardonForm::execute(const Bureaucrat &b)
 
 	PRINT << GREEN BOLT << this->_target << "has been pardoned by Zaphod Beeblebrox" << RESEND;
 
-	PRINT << BLUE BLINKING << b.getName() << " executed " << AForm::getName() << RESEND;
+	PRINT << BLUE BOLT << b.getName() << " executed " << AForm::getName() << RESEND;
 }
 
 /* !SECTION */

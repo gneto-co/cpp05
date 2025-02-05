@@ -79,7 +79,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &b)
         std::cerr << "Cannot open file\n";
     }
 
-	PRINT << BLUE BLINKING << b.getName() << " executed " << AForm::getName() << RESEND;
+	PRINT << BLUE BOLT << b.getName() << " executed " << AForm::getName() << RESEND;
 }
 
 /* !SECTION */

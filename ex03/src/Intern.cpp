@@ -62,7 +62,7 @@ AForm *Intern::makeForm(STRING form_name, STRING form_target)
 		return (new RobotomyRequestForm(form_target));
 
 	default:
-		PRINT << RED << form_name << " form doesn't exist" << RESEND;
+		throw InvalidForm();
 		break;
 	}
 
@@ -70,3 +70,8 @@ AForm *Intern::makeForm(STRING form_name, STRING form_target)
 }
 
 /* !SECTION */
+
+const char *Intern::InvalidForm::what() const throw()
+{
+    return (RED "Form doesn't exist" RESET);
+}

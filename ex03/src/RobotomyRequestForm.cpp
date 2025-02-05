@@ -67,7 +67,7 @@ void RobotomyRequestForm::execute(const Bureaucrat &b)
 	else
 		PRINT << ORANGE BOLT << "Robotomy failed" << RESEND;
 		
-	PRINT << BLUE BLINKING << b.getName() << " executed " << AForm::getName() << RESEND;
+	PRINT << BLUE BOLT << b.getName() << " executed " << AForm::getName() << RESEND;
 }
 
 /* !SECTION */

@@ -21,6 +21,13 @@ public:
 
 	/* other funtions */
 	AForm *makeForm(STRING form_name, STRING form_target);
+
+	/* exceptions */
+	class InvalidForm : public std::exception
+	{
+	public:
+		virtual const char *what() const throw();
+	};
 };
 
 #endif
